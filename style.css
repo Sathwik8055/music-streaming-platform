@@ -1,0 +1,439 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    background: #080b12;
+    color: #f5f7fb;
+    font: 14px Arial, sans-serif
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    bottom: 86px;
+    width: 235px;
+    background: #05070b;
+    padding: 25px 16px;
+    border-right: 1px solid #1b2230
+}
+
+aside h2 {
+    margin: 0 8px 35px
+}
+
+aside button {
+    display: block;
+    width: 100%;
+    padding: 12px 10px;
+    margin: 4px 0;
+    border: 0;
+    border-radius: 9px;
+    background: transparent;
+    color: #9ba4b4;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px
+}
+
+aside button:hover,
+aside .active {
+    background: #171d29;
+    color: white
+}
+
+aside hr {
+    border: 0;
+    border-top: 1px solid #1b2230;
+    margin: 25px 5px
+}
+
+aside small {
+    color: #5f6879;
+    margin: 10px
+}
+
+main {
+    margin-left: 235px;
+    padding-bottom: 100px
+}
+
+header {
+    height: 70px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 0 28px;
+    position: sticky;
+    top: 0;
+    background: #080b12ee;
+    backdrop-filter: blur(15px);
+    z-index: 3
+}
+
+header button {
+    background: #171d29;
+    color: white;
+    border: 0;
+    border-radius: 20px;
+    padding: 9px 15px;
+    cursor: pointer
+}
+
+header input,
+.big {
+    background: #171d29;
+    border: 1px solid #293243;
+    border-radius: 25px;
+    color: white;
+    outline: 0;
+    padding: 12px 18px;
+    width: 500px
+}
+
+.avatar {
+    margin-left: auto;
+    background: #253044;
+    border-radius: 50%;
+    padding: 10px 13px
+}
+
+.view {
+    padding: 10px 32px
+}
+
+.hidden {
+    display: none
+}
+
+.hero {
+    min-height: 315px;
+    border: 1px solid #202a36;
+    border-radius: 20px;
+    padding: 45px;
+    display: flex;
+    align-items: center;
+    background: radial-gradient(
+        circle at 80% 30%,
+        #2de69a33,
+        transparent 25%
+    ),
+    linear-gradient(
+        120deg,
+        #111827,
+        #091116
+    )
+}
+
+.hero h1 {
+    font-size: 52px;
+    margin: 15px 0
+}
+
+.hero em {
+    font-style: normal;
+    background: linear-gradient(
+        90deg,
+        #35ee9f,
+        #25b9ff
+    );
+    color: transparent;
+    background-clip: text
+}
+
+.hero p {
+    max-width: 550px;
+    color: #9ea8b8;
+    line-height: 1.6
+}
+
+.primary,
+.secondary {
+    border: 0;
+    border-radius: 22px;
+    padding: 12px 20px;
+    font-weight: bold;
+    cursor: pointer
+}
+
+.primary {
+    background: #34e99d;
+    color: #06120c
+}
+
+.secondary {
+    background: #202837;
+    color: white;
+    margin-left: 7px
+}
+
+.orb {
+    margin-left: auto;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 90px;
+    color: #061016;
+    background: conic-gradient(
+        #38eda1,
+        #2c8bff,
+        #9d4edd,
+        #38eda1
+    );
+    box-shadow: 0 0 90px #35e89a33
+}
+
+h2 {
+    margin: 30px 0 14px
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 14px
+}
+
+.card {
+    background: #111620;
+    padding: 12px;
+    border-radius: 13px;
+    border: 1px solid #202938;
+    cursor: pointer
+}
+
+.card:hover {
+    background: #181f2b;
+    transform: translateY(-2px)
+}
+
+.cardart {
+    aspect-ratio: 1;
+    border-radius: 9px;
+    display: grid;
+    place-items: center;
+    font-size: 34px;
+    background: linear-gradient(
+        135deg,
+        #34e99d,
+        #2a75ff
+    );
+    margin-bottom: 10px
+}
+
+.card small,
+.track small {
+    display: block;
+    color: #778195;
+    margin-top: 5px
+}
+
+.track {
+    display: grid;
+    grid-template-columns: 45px 1fr 130px 55px 35px;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 12px;
+    border-radius: 9px
+}
+
+.track:hover {
+    background: #151b26
+}
+
+.trackart {
+    width: 42px;
+    height: 42px;
+    border-radius: 7px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(
+        135deg,
+        #34e99d,
+        #287bff
+    );
+    font-weight: bold
+}
+
+.track button {
+    background: 0;
+    border: 0;
+    color: #a6afbd;
+    cursor: pointer;
+    font-size: 16px
+}
+
+.big {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0 20px
+}
+
+.now {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0
+}
+
+.now > div:nth-child(2) {
+    min-width: 0
+}
+
+.now b {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.now small {
+    display: block;
+    color: #778195;
+    margin-top: 4px
+}
+
+.now #art {
+    width: 50px;
+    height: 50px;
+    border-radius: 7px;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    background: linear-gradient(
+        135deg,
+        #34e99d,
+        #287bff
+    )
+}
+
+.now button {
+    border: 0;
+    background: 0;
+    color: #9da7b6;
+    font-size: 21px;
+    cursor: pointer
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 86px;
+    background: #0d1119;
+    border-top: 1px solid #232c3b;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 5
+}
+
+.controls {
+    max-width: 650px;
+    width: 100%;
+    margin: auto
+}
+
+.controls > div:first-child {
+    text-align: center
+}
+
+.controls button {
+    border: 0;
+    background: 0;
+    color: #b5becb;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 8px
+}
+
+.controls .play {
+    background: white;
+    color: #061016;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    color: #798394
+}
+
+.bar input {
+    width: 100%;
+    accent-color: #35e99d
+}
+
+.vol {
+    text-align: right
+}
+
+.vol input {
+    accent-color: #35e99d;
+    width: 130px
+}
+
+@media(max-width:1000px) {
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .orb {
+        display: none
+    }
+
+}
+
+@media(max-width:700px) {
+
+    aside {
+        display: none
+    }
+
+    main {
+        margin: 0
+    }
+
+    .view {
+        padding: 10px 15px
+    }
+
+    .hero {
+        padding: 28px
+    }
+
+    .hero h1 {
+        font-size: 38px
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .track {
+        grid-template-columns: 42px 1fr 35px
+    }
+
+    .track:nth-child(n) .genre,
+    .track > span {
+        display: none
+    }
+
+    footer {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .vol {
+        display: none
+    }
+
+}

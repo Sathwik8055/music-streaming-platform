@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sound Wave</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <aside>
+        <h2>〽 SOUND WAVE</h2>
+
+        <button class="nav active" data-v="home">
+            ⌂ Home
+        </button>
+
+        <button class="nav" data-v="search">
+            ⌕ Search
+        </button>
+
+        <button class="nav" data-v="library">
+            ▣ Your Library
+        </button>
+
+        <hr>
+
+        <small>PLAYLISTS</small>
+
+        <button class="pl" data-g="all">
+            ♥ Liked / All Songs
+        </button>
+
+        <button class="pl" data-g="Energy">
+            ⚡ Energy Mode
+        </button>
+
+        <button class="pl" data-g="Chill">
+            ☾ Chill Nights
+        </button>
+    </aside>
+
+
+    <main>
+
+        <header>
+            <button id="back">
+                ‹
+            </button>
+
+            <button id="fwd">
+                ›
+            </button>
+
+            <input
+                id="topSearch"
+                placeholder="What do you want to play?"
+            >
+
+            <button>
+                Install App
+            </button>
+
+            <b class="avatar">
+                S
+            </b>
+        </header>
+
+
+        <section id="home" class="view">
+
+            <div class="hero">
+
+                <div>
+                    <small>
+                        YOUR MUSIC. YOUR WAVE.
+                    </small>
+
+                    <h1>
+                        Feel the <em>Sound Wave.</em>
+                    </h1>
+
+                    <p>
+                        A standalone music streaming experience with 30 original MP3 tracks,
+                        search, playlists, shuffle, repeat and a full player.
+                    </p>
+
+                    <button id="playAll" class="primary">
+                        ▶ Play All
+                    </button>
+
+                    <button id="shuffle" class="secondary">
+                        ⤨ Shuffle
+                    </button>
+                </div>
+
+                <div class="orb">
+                    ♪
+                </div>
+
+            </div>
+
+
+            <h2>
+                Made for your energy
+            </h2>
+
+            <div id="cards" class="cards">
+            </div>
+
+
+            <h2>
+                All tracks
+                <small id="count">
+                </small>
+            </h2>
+
+            <div id="list">
+            </div>
+
+        </section>
+
+
+        <section id="search" class="view hidden">
+
+            <h1>
+                Search
+            </h1>
+
+            <input
+                id="bigSearch"
+                class="big"
+                placeholder="Search songs or genres"
+            >
+
+            <div id="results">
+            </div>
+
+        </section>
+
+
+        <section id="library" class="view hidden">
+
+            <h1>
+                Your Library
+            </h1>
+
+            <p>
+                Local Sound Wave collection
+            </p>
+
+            <div id="libraryList">
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="now">
+
+            <div id="art">
+                ♪
+            </div>
+
+            <div>
+                <b id="title">
+                    Select a track
+                </b>
+
+                <small id="genre">
+                    Sound Wave
+                </small>
+            </div>
+
+            <button id="like">
+                ♡
+            </button>
+
+        </div>
+
+
+        <div class="controls">
+
+            <div>
+
+                <button id="prev">
+                    ◀
+                </button>
+
+                <button id="play" class="play">
+                    ▶
+                </button>
+
+                <button id="next">
+                    ▶
+                </button>
+
+                <button id="rep">
+                    ↻
+                </button>
+
+            </div>
+
+
+            <div class="bar">
+
+                <span id="cur">
+                    0:00
+                </span>
+
+                <input
+                    id="seek"
+                    type="range"
+                    min="0"
+                    max="100"
+                    value="0"
+                >
+
+                <span id="dur">
+                    0:00
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="vol">
+
+            🔊
+
+            <input
+                id="volume"
+                type="range"
+                min="0"
+                max="1"
+                step=".01"
+                value=".8"
+            >
+
+        </div>
+
+    </footer>
+
+
+    <audio id="audio">
+    </audio>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
